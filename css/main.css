@@ -1,0 +1,812 @@
+/* -------------------------General code----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+/* ------------------------Section 1 - Header start------------------- */
+.header {
+  width: 100%;
+  height: 55px;
+  background-color: black;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  align-items: center;
+  font-size: 15px;
+}
+.header-image {
+  height: 55px;
+  width: 150x;
+  margin-left: 120px;
+  float: left;
+  cursor: pointer;
+}
+.header-ul {
+  list-style: none;
+  float: right;
+  text-transform: capitalize;
+}
+.header-ul li {
+  display: inline-block;
+  color: white;
+  margin: 16px 25px;
+}
+.header-ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.header-ul li a:hover {
+  color: red;
+}
+.log_out {
+  margin-right: 40px;
+}
+/* ------------------------Section 1 - Header End------------------- */
+/* ------------------------Section 2 - -Home Start---------------- */
+.container-Home {
+  background-image: url("https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.Home-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* لتوسيط العناصر في منتصف الصفحة افقيا وعموديا */
+.Home-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+}
+.Home-header {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+.Home-paragraph {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 25px;
+}
+.Home-search {
+  width: 300px;
+  height: 54px;
+  display: inline-block;
+  background-color: transparent; /* شفافة search لجعل خلفية الـ */
+  border: 2px solid white;
+  color: white;
+  font-size: 20px;
+  padding: 0 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.Home-button {
+  width: 200px;
+  height: 54px;
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  padding: 8px 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.Home-button:hover {
+  opacity: 0.7;
+  transition: 1s;
+}
+/*  search في الـ placeholder لتغيرر لون الـ */
+.Home-search::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+}
+/* -------------------------------Section 2 - Home End---------------------------------- */
+/* -------------------------------Section 3 - welcome start---------------------------------- */
+.welcome-container {
+  height: 350px;
+  width: 70%;
+  margin: auto;
+  padding: 50px 0; /* لإضافة مساحة علوية وسفلية */
+}
+.welcome-header {
+  text-align: center;
+  font-size: 55px;
+  text-transform: capitalize;
+  padding-top: 100px;
+}
+.welcome-line {
+  height: 4px;
+  width: 150px;
+  background-color: red;
+  margin: auto;
+  margin-top: 10px;
+}
+.welcome-parent {
+  overflow: auto;
+  margin-top: 30px;
+}
+.welcome-item {
+  float: left;
+  width: 30%;
+  margin: auto;
+  padding: 10px 10px;
+  text-align: center;
+  border: 1px solid black;
+  height: 200px;
+  position: relative;
+}
+/* item لتنسيق المسافة بين  الـ  */
+.welcome-item2 {
+  margin: 0px 5%;
+}
+.welcome-icon {
+  padding: 5px 5px;
+  font-size: 30px;
+  color: red;
+}
+.welcome-h2 {
+  margin-bottom: 15px;
+  font-weight: 800;
+  margin-top: 5px;
+}
+.welcome-item-link {
+  color: red;
+}
+.welcome-item::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  opacity: 1;
+  z-index: -1;
+}
+.welcome-item:hover::after {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: 0.5s;
+}
+.welcome-item:hover {
+  color: white;
+}
+
+/* -------------------------------Section 3 - welcome End---------------------------------- */
+/* -------------------------------Section 4 - Featured Start---------------------------------- */
+.featured-works-container {
+  height: auto;
+}
+
+.featured-works-parent {
+  width: 70%;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.featured-works-container-item {
+  overflow: hidden; /* لإزالة تأثير الفلوت */
+  margin-left: -1%; /* تعويض الهوامش السالبة للعناصر */
+  margin-right: -1%;
+}
+
+.featured-works-item {
+  float: left;
+  width: 31.33%; /* عرض العنصر ليكمل مع الهوامش */
+  margin: 0 1% 20px 1%; /* هوامش علوية وسفلية، وهامش يمين ويسار */
+  text-align: center;
+  border: 1px solid black;
+  position: relative;
+  height: 300px;
+  box-sizing: border-box; /* للتأكد من احتساب الحدود ضمن العرض */
+}
+
+/* لضمان أن كل عنصر يبدأ صفًا جديدًا */
+.featured-works-item:nth-child(3n + 1) {
+  clear: left;
+}
+
+.featured-image img {
+  height: 300px;
+  width: 100%;
+  display: block;
+}
+
+.featured-image {
+  position: relative;
+  z-index: 1;
+}
+
+.featured-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* خلفية شبه شفافة */
+  opacity: 0; /* إخفاء الـ overlay بشكل افتراضي */
+  transition: opacity 0.3s ease; /* إضافة تأثير تدريجي للعرض */
+  z-index: 2;
+}
+
+.featured-works-item:hover .featured-image::after {
+  opacity: 1; /* يظهر الـ overlay عند التمرير على العنصر */
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* إضافة تأثير تدريجي للعرض */
+  z-index: 3; /* ضمان ظهور المحتوى فوق الـ overlay */
+}
+
+.featured-works-item:hover .overlay-content {
+  opacity: 1;
+}
+
+.overlay-content h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.8em;
+}
+
+.overlay-content p {
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.overlay-content a {
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin: 0 10px; /* مسافة بين الأيقونات */
+}
+
+.overlay-content a:hover {
+  color: red; /* تأثير على الأيقونة عند التمرير */
+}
+
+.overlay-content .icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* مسافة بين الأيقونات */
+}
+
+/* -------------------------------Section 4 - Featured End---------------------------------- */
+/* -------------------------------Section 5 - Our offer Start---------------------------------- */
+.our-offer-item2 {
+  margin: 0px 5%;
+}
+.our-offer-item {
+  margin-bottom: 20px;
+}
+.our-offer-container {
+  height: 600px;
+}
+/* -------------------------------Section 5 - Our offer End---------------------------------- */
+/* -------------------------------Section 6 - Why chose us Start---------------------------------- */
+
+.why-chose-us-conatiner {
+  height: 600px;
+  margin-top: 60px;
+}
+.why-chose-us-parent {
+  overflow: auto;
+  width: 70%;
+  margin: auto;
+}
+.why-chose-us-image {
+  float: right;
+}
+.why-chose-us-content {
+  float: left;
+  margin-top: -100px;
+}
+.why-chose-us-image img {
+  height: 400px;
+  width: 400px;
+}
+.why-chose-us-h2,
+.why-chose-us-line {
+  transform: translateX(-90px);
+  transition: transform 0.5s;
+}
+.why-chose-us-p {
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.why-chose-us-inside {
+  display: flex;
+  align-items: center; /* لضمان محاذاة العناصر عموديًا بشكل صحيح */
+  margin: 12px 0px;
+}
+.why-chose-us-inside-icon {
+  margin-right: 8px; /* إضافة مسافة بين الأيقونة والنص (اختياري) */
+  color: red;
+  font-size: 22px;
+}
+
+.why-chose-us-inside-p {
+  margin: 0; /* لإزالة أي هوامش افتراضية قد تؤثر على المحاذاة */
+  font-size: 22px;
+  font-weight: 300;
+}
+.dots-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px; /* مسافة بين كل دائرة */
+  background-color: lightgray; /* اللون الافتراضي */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* التحول السلس عند التمرير */
+}
+
+.dot:hover {
+  background-color: red;
+}
+
+/* -------------------------------Section 6 - Why chose us End---------------------------------- */
+/* -------------------------------Section 7 - background 1 start---------------------------------- */
+
+.background1-container {
+  height: 350px;
+  background-image: url("https://img.freepik.com/free-vector/abstract-red-light-lines-pipe-speed-zoom-black-background-technology_1142-8829.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative; /* لضبط العناصر المطلقة داخله */
+}
+
+.background1-parent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap; /* لمنع العناصر من الانتقال إلى سطر جديد */
+}
+
+.background1-item {
+  color: #f0f0f0; /* لون خط أبيض ناعم */
+  font-size: 35px; /* حجم خط أصغر قليلاً */
+  display: inline-block; /* لضمان بقاء العناصر في نفس السطر */
+  text-align: center;
+  margin: 0 30px; /* مسافة أكبر قليلاً بين العناصر */
+  padding: 10px;
+}
+
+.background1-icon {
+  font-size: 40px; /* حجم أيقونة أكبر */
+  color: red; /* لون أيقونة سماوي */
+  display: block;
+  margin: 0 auto 10px; /* لضبط الأيقونة في وسط العنصر */
+}
+
+.background1-item p {
+  margin: 5px 0; /* ضبط الهوامش داخل العناصر */
+  font-size: 20px; /* حجم الخط للنصوص الصغيرة */
+  font-weight: 500;
+}
+/* -------------------------------Section 7 - background 1 end---------------------------------- */
+/* -------------------------------Section 8 - price start---------------------------------- */
+
+.container-price {
+  height: 800px;
+  width: 100%;
+  overflow: auto;
+}
+.div1,
+.div2,
+.div3 {
+  float: left;
+  height: 400px;
+  width: 300px;
+  border: 2px black solid;
+  margin-top: 30px;
+  margin-left: 55px;
+  margin-right: 50px;
+  text-align: center;
+  padding-top: 10px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.div1 {
+  margin-left: 200px;
+}
+hr {
+  width: 200px;
+  margin: auto;
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px black solid;
+  margin: auto;
+  font-size: 20px;
+}
+.hr_in_div {
+  width: 100px;
+}
+button {
+  width: 150px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 17px;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.circle:hover {
+  border: 2px red solid;
+}
+
+.container-price p:hover {
+  color: red;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: red;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+.div1:hover,
+.div2:hover,
+.div3:hover {
+  border: 2px red solid;
+  transform: translateY(-10px);
+}
+.div1:hover h2,
+.div2:hover h2,
+.div3:hover h2 {
+  color: red;
+  font-size: 30px;
+}
+/* -------------------------------Section 8 - price end---------------------------------- */
+/* -------------------------------Section 9 - background 2 start---------------------------------- */
+
+.background2-container {
+  height: 350px;
+  background-image: url("https://img.freepik.com/premium-photo/speed-line-bluered-color-black-background-anime_737078-1732.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative; /* لضبط العناصر المطلقة داخله */
+  margin-top: -200px;
+}
+
+.background2-parent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 50px; /* المسافة بين العناصر */
+  white-space: nowrap; /* لمنع العناصر من الانتقال إلى سطر جديد */
+}
+
+.background2-item {
+  text-align: center;
+  color: white;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.job-title {
+  color: lightblue;
+  font-size: 14px;
+}
+/* -------------------------------Section 9 - background 2 end---------------------------------- */
+/* -------------------------------Section 10 - our teams start---------------------------------- */
+#our-team {
+  padding: 50px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.team-content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-item {
+  width: 250px;
+  text-align: center;
+}
+
+.team-img {
+  position: relative;
+  overflow: hidden; /* لمنع خروج الـ after خارج الصورة */
+}
+
+.team-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.team-overlay i {
+  font-size: 20px;
+}
+/* Overlay icons */
+.team-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2; /* لضمان بقاء الأيقونات فوق الـ after */
+}
+
+/* Hover effect to show overlay */
+.team-img:hover .team-overlay {
+  opacity: 1;
+}
+
+/* After effect for hover on image */
+.team-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* اللون الأسود الشفاف */
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 1; /* لضمان أن الـ after تحت الأيقونات */
+}
+
+/* Show the black overlay on hover */
+.team-img:hover::after {
+  opacity: 0.6;
+}
+
+.team-info h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.team-info span {
+  color: gray;
+}
+
+/* -------------------------------Section 10 - our teams end---------------------------------- */
+/* -------------------------------Section 11 - Recent news  start---------------------------------- */
+#recent-news {
+  padding: 50px 0;
+  background-color: #fff;
+}
+.news-content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.news-item {
+  position: relative; /* لتطبيق after */
+  width: 300px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #f9f9f9;
+  overflow: hidden; /* لمنع overflow عند استخدام after */
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.news-img img {
+  width: 100%;
+  height: 300px;
+}
+
+.news-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.news-icons a {
+  color: #333;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.news-icons a:hover {
+  color: blue;
+}
+
+.news-info h3 {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.news-info p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.read-more {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hover effect with after */
+.news-item::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(248, 5, 5, 0.1);
+  transition: all 0.4s ease-in-out;
+  z-index: 1; /* يتأكد من أن after فوق المحتوى */
+}
+
+.news-item:hover::after {
+  top: 0;
+}
+
+.news-item:hover .news-info,
+.news-item:hover .news-icons {
+  position: relative;
+  z-index: 2;
+}
+.news-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px; /* التباعد بين المجموعات */
+  margin: 10px 0;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* التباعد بين الأيقونة والنص */
+}
+
+.news-icons a {
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+.news-span {
+  font-size: 12px;
+  color: #555;
+}
+
+.news-icons a:hover {
+  color: red; /* تغيير لون الأيقونة عند التمرير */
+}
+
+.news-icons .news-span:hover {
+  color: red; /* تغيير لون النص عند التمرير */
+}
+
+/* -------------------------------Section 11 - Recent news  end---------------------------------- */
+/* -------------------------------Section 12 - Footer start---------------------------------- */
+
+/* Footer General Styles */
+footer {
+  background-color: black;
+  background-attachment: fixed;
+  height: 330px;
+  padding: 40px 20px 20px; /* تعديل padding-bottom */
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer Container */
+.footer-container {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Footer Parent */
+.footer-parent {
+  display: flex;
+  flex-direction: column; /* يجعل الصورة فوق الأيقونات */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Footer Image */
+.footer-img img {
+  margin-top: -70px;
+  max-width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect on Image */
+.footer-img img:hover {
+  transform: scale(1.05);
+}
+
+.footer-link i {
+  display: inline-block;
+  color: white;
+  font-size: 35px;
+  text-align: center;
+}
+
+.footer-link {
+  display: flex; /* يجعل الأيقونات في صف واحد */
+  justify-content: center; /* يضمن توسيط الأيقونات */
+  margin-top: 20px; /* إضافة مسافة بين الصورة والأيقونات */
+  text-align: center;
+}
+
+.footer-link a {
+  margin: 0 7px; /* إضافة مسافة أفقية بين الأيقونات */
+}
+
+.footer-link a i:hover {
+  color: red;
+}
+
+.footer-pargraph {
+  color: white;
+  margin-top: 10px; /* تقليل المسافة العلوية */
+  margin-bottom: 0; /* إزالة أي مسافة سفلية */
+  font-size: 17px;
+}
+/* -------------------------------Section 12 - Footer end ---------------------------------- */
